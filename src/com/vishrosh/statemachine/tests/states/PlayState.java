@@ -12,6 +12,7 @@ public class PlayState extends GameState {
 	@Override
 	public void onLoad() {
 		System.out.println("[Game] Loading...");
+		this.setLoaded(true);
 	}
 
 	@Override
@@ -20,7 +21,7 @@ public class PlayState extends GameState {
 	}
 
 	@Override
-	public void render(double deltaTime) {
+	public void render() {
 		System.out.println("[Game] Rendering...");
 	}
 

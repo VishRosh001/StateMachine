@@ -22,7 +22,10 @@ public class Main {
 		a.renderCurrentState();
 		a.exitCurrentState(false);
 		
-		a.setCurrentState(State.Game);
+		a.setNextState(State.Game);
+		
+		//a.setCurrentState(State.Game);
+		a.loadCurrentState();
 		a.updateCurrentState(3);
 		a.renderCurrentState();
 

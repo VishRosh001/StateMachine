@@ -14,7 +14,7 @@ public abstract class GameState{
 	
 	public abstract void update(double deltaTime);
 	
-	public abstract void render(double deltaTime);
+	public abstract void render();
 	
 	public abstract void onExit();
 
