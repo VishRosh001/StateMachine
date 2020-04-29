@@ -1,0 +1,41 @@
+package com.vishrosh.statemachine.core;
+
+public abstract class GameState{
+	
+	private boolean isLoaded;
+	private State state;
+	
+	public GameState(State state) {
+		this.setLoaded(false);
+		this.setState(state);
+	}
+	
+	public abstract void onLoad();
+	
+	public abstract void update(double deltaTime);
+	
+	public abstract void render(double deltaTime);
+	
+	public abstract void onExit();
+
+	public boolean isLoaded() {
+		return isLoaded;
+	}
+
+	public void setLoaded(boolean isLoaded) {
+		this.isLoaded = isLoaded;
+	}
+
+	public State getState() {
+		return state;
+	}
+
+	public void setState(State state) {
+		this.state = state;
+	}
+	
+	public GameState getGameState() {
+		return this;
+	}
+	
+}
