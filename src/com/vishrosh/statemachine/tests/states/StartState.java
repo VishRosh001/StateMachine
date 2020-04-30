@@ -30,4 +30,9 @@ public class StartState extends GameState{
 		System.out.println("[Start] Exiting...");
 	}
 
+	@Override
+	public void input() {
+		
+	}
+
 }

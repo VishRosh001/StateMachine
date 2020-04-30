@@ -30,4 +30,9 @@ public class PlayState extends GameState {
 		System.out.println("[Game] Exiting...");
 	}
 
+	@Override
+	public void input() {
+		
+	}
+
 }

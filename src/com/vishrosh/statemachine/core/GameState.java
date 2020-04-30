@@ -16,6 +16,8 @@ public abstract class GameState{
 	
 	public abstract void render();
 	
+	public abstract void input();
+	
 	public abstract void onExit();
 
 	public boolean isLoaded() {

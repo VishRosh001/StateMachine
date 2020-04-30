@@ -12,6 +12,7 @@ public class GameStateManager {
 	}
 	
 	public void loadCurrentState() {
+		if(GameStateRegistry.getRegistry().getRegisteredGameState(this.getCurrentState()).isLoaded())return;
 		GameStateRegistry.getRegistry().getRegisteredGameState(this.getCurrentState()).onLoad();
 	}
 	
@@ -23,6 +24,10 @@ public class GameStateManager {
 	public void renderCurrentState() {
 		if(!GameStateRegistry.getRegistry().getRegisteredGameState(currentState).isLoaded())return;
 		GameStateRegistry.getRegistry().getRegisteredGameState(this.getCurrentState()).render();
+	}
+	
+	public void handleCurrentStateInput() {
+		
 	}
 	
 	public void exitCurrentState(boolean loadNextState) {
